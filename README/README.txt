@@ -1,0 +1,1 @@
+Name: Elmer RodriguezInstitution: University of RochesterSemester: Fall 2016Course: CSC174- Advanced Front End DevelopmentProfessor: Robert (K)ostinProject03: Portfolio WebsiteAll Rights ReservedFile Name: README.txtThe purpose of this file is to document anything related to this project. After the project has been completed.
