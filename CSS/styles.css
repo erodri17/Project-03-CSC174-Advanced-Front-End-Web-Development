@@ -1,28 +1,315 @@
-/*	****************************************
-	Demo styles (for demo purposes only)
-	**************************************** */
-p { margin-top: 0; }
+    /*	****************************************
+    // Name: Elmer Rodriguez
+    // Institution: University of Rochester
+    // Semester: FAll 2016
+    // Course: CSC174 - Advanced Front End Web Development
+    // Professor: Robert (K)ostin
+    // Project03: Invidual Portfolio
+    // Filename: styles.css
+    // All Rights Reserved
+    **************************************** */
 
-.right {
-	float: right;
-	margin-left: 15px;
+
+    /*****************************************
+    SMACSS - Base, Layout, Module, State, Theme
+    **************************************** */
+
+
+    /*	****************************************
+    Base - Layout rules divide the page into sections. Layouts hold one or more modules together.(html,body, etc)
+    **************************************** */
+    html,
+    body {
+    overflow-x: hidden; /* Prevent scroll on narrow devices */
+    }
+
+    body {
+    padding-top: 70px;
+    background: url(http://subtlepatterns.com/patterns/scribble_light.png) ;
+    }
+
+    footer {
+    padding: 30px 0;
+    }
+
+    p { margin-top: 0; }
+
+
+
+    /*	****************************************
+    Layout -
+    **************************************** */
+
+/* Nav Bar Properties*/
+/*Editing the name "Elmer Rodriguez"*/
+.name{
+    font-size: 20px;
+    position: relative;
+    margin-right: 30px;
+    float: left;
 }
 
-.frame {
-	border: 1px solid #666;
-	padding: 5px;
+/*Editing the Element "The 'Hero' Z-Pattern Section"*/
+.first{
+    font-size: 20px;
+    position: relative;
 }
 
-/*	****************************************
-	Modules (reusable classes)
-	**************************************** */
-.container {
-	margin: 0 auto;
-	width: 95%;
-	max-width: 960px; 
+/*Editing the Element "The Content F-pattern Section"*/
+.second{
+    font-size: 20px;
+    position: relative;
 }
 
-.content {
-	text-align: left;
-	overflow: auto;
+/*Editing the "Colophon-Like Card Section:"*/
+.third{
+    font-size: 20px;
+    position: relative;
+}
+
+/*End: Nav Bar Properties*/
+
+
+/*footer text class*/
+    .footer{padding-left: 40px;}
+
+
+    .right {
+    float: right;
+    margin-left: 15px;
+    }
+    .frame {
+    border: 1px solid #666;
+    padding: 5px;
+    }
+
+
+
+    /* Off Canvas related classes*/
+    .row-offcanvas-right {
+    right: 0;
+    }
+
+
+    .row-offcanvas-left {
+    left: 0;
+    }
+
+    .sidebar-offcanvas {
+    right: -50%;
+    }
+
+    .row-offcanvas-left
+    .sidebar-offcanvas {
+    left: -50%;
+    }
+
+    .row-offcanvas-right.active {
+    right: 50%;
+    }
+
+
+    .row-offcanvas-left.active {
+    left: 50%;
+    }
+
+
+    .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    }
+
+    /*End: Off Canvas ralated classes */
+
+
+
+
+
+#wrapper {
+    width: 90%;
+    max-width: 1100px;
+    min-width: 800px;
+    margin: 50px auto;
+}
+
+#columns {
+    -webkit-column-count: 3;
+    -webkit-column-gap: 10px;
+    -webkit-column-fill: auto;
+    -moz-column-count: 3;
+    -moz-column-gap: 10px;
+    -moz-column-fill: auto;
+    column-count: 3;
+    column-gap: 15px;
+    column-fill: auto;
+}
+
+.pin {
+    display: inline-block;
+    background: #FEFEFE;
+    border: 2px solid #FAFAFA;
+    box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+    margin: 0 2px 15px;
+    -webkit-column-break-inside: avoid;
+    -moz-column-break-inside: avoid;
+    padding: 15px;
+    padding-bottom: 5px;
+    background: -webkit-linear-gradient(45deg, #FFF, #F9F9F9);
+    opacity: 1;
+
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+.pin img {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
+    margin-bottom: 5px;
+}
+
+.pin p {
+    font: 12px/18px Arial, sans-serif;
+    color: #333;
+    margin: 0;
+}
+
+    /*	****************************************
+    Module -  are the reusable, modular parts of our design.
+    They are the callouts, the sidebar sections, the product lists and so on. (classes)
+    **************************************** */
+    .container {
+    margin: 0 auto;
+    width: 95%;
+    max-width: 960px;
+    }
+
+    .content {
+    text-align: left;
+    overflow: auto;
+    }
+    /*
+    /* Nav Bar Properties*/
+
+
+
+    /*Paraphs alignment*/
+    .left-container{
+    border-color: black;
+    box-sizing: border-box;
+    float: left;
+
+    width: 50%;
+    }
+
+    .right-container{
+    box-sizing:border-box ;
+    float: right;
+    width: 50%
+    }
+
+    /* End: First Section Edits*/
+
+    /*Second Section Edits*/
+    .f-box{
+    background-color: pink;
+    border-radius: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    }
+
+    .left-tab{
+
+    box-sizing: border-box;
+    float: left;
+    width: 30%;
+    padding-left: 25px;
+    padding-top: 20px;
+
+    }
+    .right-tab{
+    box-sizing:border-box ;
+    float: right;
+    width: 70%
+
+    }
+    /*End: Second Section Edits*/
+
+    /*Third Section*/
+    .card-container{
+    padding: 2px 16px;
+
+    }
+    .card{
+
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+
+    }
+
+    .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+
+    #third{
+    padding-top: 20px;
+    }
+
+    /*End: Third Section*/
+
+    /*	****************************************
+    State - are ways to describe how our modules or layouts will look when in a particular state.(javascript)
+    **************************************** */
+    #wrapper {
+    width: 90%;
+    max-width: 1100px;
+    min-width: 800px;
+    margin: 50px auto;
+    }
+    #columns {
+    -webkit-column-count: 3;
+    -webkit-column-gap: 10px;
+    -webkit-column-fill: auto;
+    -moz-column-count: 3;
+    -moz-column-gap: 10px;
+    -moz-column-fill: auto;
+    column-count: 3;
+    column-gap: 15px;
+    column-fill: auto;
+    }
+
+    /*	****************************************
+    Theme - Theme rules are similar to state rules in that they describe
+    how modules or layouts might look.
+    **************************************** */
+
+
+    @media (min-width: 960px) {
+    #columns {
+    -webkit-column-count: 4;
+    -moz-column-count: 4;
+    column-count: 4;
+        }
+    }
+
+    @media (min-width: 1100px) {
+    #columns {
+    -webkit-column-count: 5;
+    -moz-column-count: 5;
+    column-count: 5;
+    }
+    }
+
+    /* Off Canvas */
+    @media screen and (max-width: 767px) {
+    .row-offcanvas {
+    position: relative;
+    -webkit-transition: all .25s ease-out;
+     -o-transition: all .25s ease-out;
+        transition: all .25s ease-out;
+    }
 }
